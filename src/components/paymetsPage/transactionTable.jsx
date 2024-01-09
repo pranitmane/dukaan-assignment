@@ -7,8 +7,8 @@ import { parseISO, format } from "date-fns";
 
 export default function TransactionTable({ data }) {
   return (
-    <div>
-      <div className="flex flex-row justify-between gap-3 pb-3 ">
+    <div className="overflow-x-scroll">
+      <div className="flex flex-row justify-between gap-3 pb-3 sticky left-0">
         <div className="w-[216px] flex flex-row text-md1 border border-Black85 pt-[10px] pb-[10px] pl-4 pr-4 rounded-base gap-2">
           <img src={search} alt="search-icon" />
           <input
@@ -30,20 +30,20 @@ export default function TransactionTable({ data }) {
       <table className=" w-full">
         <thead>
           <tr className="text-Black30 bg-Black95 rounded-base">
-            <th className="text-start text-sm1 pl-3 pt-[10px] pb-[10px] pr-10 rounded-l-base">
+            <th className="text-start text-sm2 pl-3 pt-[10px] pb-[10px] pr-10 rounded-l-base">
               Order ID
             </th>
-            <th className="text-start text-sm1 pl-3 pt-[10px] pb-[10px] pr-10">
+            <th className="text-start text-sm2 pl-3 pt-[10px] pb-[10px] pr-10">
             <div className="flex flex-row gap-1 max-w-fit">
                 <p>Order date</p>
                 <img src={triangle} alt="" />
               </div>
             </th>
-            <th className="text-end text-sm1 pl-3 pt-[10px] pb-[10px] pr-10">
+            <th className="text-end text-sm2 pl-3 pt-[10px] pb-[10px] pr-10">
               Order amount
             </th>
             <th className="flex flex-row justify-end text-sm1 pt-[10px] pb-[10px] pr-3 rounded-r-base">
-              <div className="flex flex-row gap-1 max-w-fit">
+              <div className="flex text-sm2 flex-row gap-1 max-w-fit">
                 <p>Transaction fees</p>
                 <img src={info} alt="" />
               </div>
@@ -52,9 +52,9 @@ export default function TransactionTable({ data }) {
         </thead>
         <tbody className="">
           {data.map((payment) => (
-            <tr className="text-sm1  border-b-Black90 rounded-base">
+            <tr className="text-sm1 border-b-Black90 rounded-base">
               <td className="p-0">
-                <p className="text-start whitespace-nowrap ml-3  text-Blue border-b border-b-Black90 pt-[10px] pb-[10px] pr-10">
+                <p className="text-start text-sm2 whitespace-nowrap ml-3  text-Blue border-b border-b-Black90 pt-[10px] pb-[10px] pr-10">
                   {payment.order_id}
                 </p>
               </td>

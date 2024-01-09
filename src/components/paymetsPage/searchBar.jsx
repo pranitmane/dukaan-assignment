@@ -11,18 +11,18 @@ export default function SearchBar() {
       <div className="md:hidden flex items-center justify-center">
       </div>
       <div className="flex-1 flex flex-col md:flex-row items-center gap-1 md:gap-4">
-        <h2 className="text-xl">Payments</h2>
+        <h2 className="text-md1">Payments</h2>
         <div className="flex flex-row gap-[6px]">
           <img src={Help} alt="" />
-          <p className="text-sm text-Black30 hover:underline cursor-help">
+          <p className="text-2xs text-Black30 hover:underline cursor-help">
             How it works
           </p>
         </div>
       </div>
-      <div className="flex-1 flex flex-row text-md1 bg-Black95 pt-[9px] pb-[9px] pl-4 pr-4 rounded-base gap-2">
+      <div className="flex-1 flex flex-row  bg-Black95 pt-[9px] pb-[9px] pl-4 pr-4 rounded-base gap-2">
         <img src={Search} alt="search-icon" />
         <input
-          className="w-full bg-transparent outline-none"
+          className="w-full bg-transparent outline-none text-md1"
           type="text"
           placeholder="Search features, tutorials, etc"
         />

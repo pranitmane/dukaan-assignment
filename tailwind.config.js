@@ -6,11 +6,12 @@ export default {
   ],
   theme: {
     fontSize:{
-      'xs':['13px',{lineHeight:'24px',fontWeight:'400'}],
-      'sm1':['14px',{lineHeight:'24px',fontWeight:'400'}],
-      'sm2':['14px',{lineHeight:'24px',fontWeight:'500'}],
-      'md1':['15px',{lineHeight:'24px',fontWeight:'400'}],
-      'md2':['15px',{lineHeight:'24px',fontWeight:'500'}],
+      '2xs':['12px',{lineHeight:'16px',fontWeight:'400'}],
+      'xs':['13px',{lineHeight:'16px',fontWeight:'400'}],
+      'sm1':['14px',{lineHeight:'20px',fontWeight:'400'}],
+      'sm2':['14px',{lineHeight:'20px',fontWeight:'500'}],
+      'md1':['15px',{lineHeight:'22px',fontWeight:'400'}], 
+      'md2':['15px',{lineHeight:'22px',fontWeight:'500'}],
       'lg1':['16px',{lineHeight:'24px',fontWeight:'400'}],
       'lg2':['16px',{lineHeight:'24px',fontWeight:'500'}],
       'xl':['20px',{lineHeight:'28px',fontWeight:'500'}],

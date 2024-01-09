@@ -39,7 +39,7 @@ const path = location.pathname
     <div className="min-w-[224px] pt-4 p-2 pb-4 flex flex-col items-center bg-Navbar text-Black100 h-full">
       <div className="flex flex-col items-center overflow-y-scroll gap-8 w-full flex-1">
         <StoreDetails />
-        <nav className="flex flex-col gap-1 w-full text-sm1">
+        <nav className="flex flex-col gap-1 w-full text-sm2">
           <NavLink
             to="/"
             className={({ isActive }) => {

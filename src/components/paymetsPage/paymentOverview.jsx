@@ -3,7 +3,7 @@ import arrow from "../../assets/paymentsPage/arrow.svg";
 export default function PaymentOverview({ setMonth }) {
     return (
       <div className="flex flex-row justify-between items-center pb-6">
-        <p className="text-xl">Overview</p>
+        <p className="text-xl text-Black12">Overview</p>
         <div className="flex flex-row gap-[7px] items-center bg-Black100 text-Black30 border border-Black85 rounded-base relative ">
           <select
             type="select"
