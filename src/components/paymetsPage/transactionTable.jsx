@@ -18,11 +18,11 @@ export default function TransactionTable({ data }) {
           />
         </div>
         <div className="flex flex-row gap-3">
-          <button className="text-md1 border hover:bg-Black98 rounded-base border-Black85 text-Black30 flex flex-row gap-[6px] justify-center items-center pl-3 pr-3 pt-[3px] pb-[3px]">
+          <button className="border hover:bg-Black98 rounded-base border-Black85 text-Black30 flex flex-row gap-[6px] justify-center items-center pl-3 pr-3 pt-[6px] pb-[6px]">
             <p className="text-lg1">Sort</p>
             <img src={sort} alt="" />
           </button>
-          <button className="border rounded-base hover:bg-Black98 border-Black85 text-Black30 flex flex-row justify-center items-center pl-3 pr-3 pt-[3px] pb-[3px]">
+          <button className="border rounded-base hover:bg-Black98 border-Black85 text-Black30 flex flex-row justify-center items-center pl-3 pr-3 pt-[6px] pb-[6px]">
             <img src={combinedShape} alt="" />
           </button>
         </div>
