@@ -23,7 +23,7 @@ export default function PaymentsPage({navOpen,setNavOpen}) {
           <p className="text-xl">Transactions</p>
           <p className="text-xl border-l-[2px] border-Black12 pl-2">{month}</p>
         </div>
-        <div className="p-3 bg-white rounded-plus shadow-base-base ">
+        <div className="p-3 pb-6 bg-white rounded-plus shadow-base-base ">
           <TransactionTable data={payments} />
         </div>
       </div>

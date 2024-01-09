@@ -4,10 +4,11 @@ import sort from "../../assets/paymentsPage/sort.svg";
 import search from "../../assets/paymentsPage/search.svg";
 import combinedShape from "../../assets/paymentsPage/combinedShape.svg";
 import { parseISO, format } from "date-fns";
+import Pagination from "./pagination";
 
 export default function TransactionTable({ data }) {
   return (
-    <div className="overflow-x-scroll">
+    <div className="overflow-x-scroll  ">
       <div className="flex flex-row justify-between gap-3 pb-3 sticky left-0">
         <div className="w-[216px] flex flex-row text-md1 border border-Black85 pt-[10px] pb-[10px] pl-4 pr-4 rounded-base gap-2">
           <img src={search} alt="search-icon" />
@@ -77,6 +78,9 @@ export default function TransactionTable({ data }) {
           ))}
         </tbody>
       </table>
+      <div className="w-full flex flex-row items-center justify-center pt-6">
+          <Pagination />
+      </div>
     </div>
   );
 }
