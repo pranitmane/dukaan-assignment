@@ -7,6 +7,7 @@ import Layout from './layout.jsx'
 import HomePage from './pages/homePage.jsx'
 import PaymentsPage from './pages/paymentPage.jsx'
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
   <Route path="/" element={<Layout/>}>

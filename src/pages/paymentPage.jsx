@@ -10,13 +10,13 @@ import payments from "../services/payments.json";
 
 
 
-export default function PaymentsPage() {
+export default function PaymentsPage({navOpen,setNavOpen}) {
   const [month, setMonth] = useState("This Month");
 
   return (
-    <div className="w-full h-full relative">
-      <SearchBar />
-      <div className="p-8">
+    <div className="w-full h-full relative overflow-y-scroll flex-1">
+      <SearchBar setNavOpen={setNavOpen} />
+      <div className="p-3 md:p-8">
         <PaymentOverview setMonth={setMonth} />
         <PaymentStats />
         <div className="flex flex-row gap-2 text-Black12 pb-5">

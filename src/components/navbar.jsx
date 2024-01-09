@@ -30,17 +30,16 @@ import {useState} from 'react'
 import { NavLink,useLocation} from "react-router-dom";
 
 export default function Navbar() {
-const [active, setActive] = useState(false)
 const location = useLocation()
 const path = location.pathname
 
 
 
   return (
-    <div className="w-[224px] pt-4 p-2 pb-4 flex flex-col items-center bg-Navbar text-Black100 h-full fixed left-0 right-0 ">
-      <div className="flex flex-col items-center gap-8 w-full flex-1">
+    <div className="min-w-[224px] pt-4 p-2 pb-4 flex flex-col items-center bg-Navbar text-Black100 h-full">
+      <div className="flex flex-col items-center overflow-y-scroll gap-8 w-full flex-1">
         <StoreDetails />
-        <nav className="flex flex-col gap-1 w-full overflow-y-scroll text-sm1">
+        <nav className="flex flex-col gap-1 w-full text-sm1">
           <NavLink
             to="/"
             className={({ isActive }) => {
@@ -108,7 +107,7 @@ const path = location.pathname
 
 function StoreDetails() {
   return (
-    <div className="flex w-[192px] flex-row justify-center items-center gap-3 rounded-base">
+    <div className="flex w-[192px] flex-row justify-center items-center gap-3 rounded-base sticky top-0 bg-Navbar">
       <img
         src="/shopIcon.png"
         alt="shop-icon"
@@ -129,7 +128,7 @@ function StoreDetails() {
 
 function WalletDetails() {
   return (
-    <div className="flex flex-row w-[192px] p-3 pt-[3px] pb-[3px] bg-[#353C53] gap-2 rounded-base">
+    <div className="flex flex-row w-[192px] p-3 pt-[3px] pb-[3px] bg-[#353C53] gap-2 rounded-base sticky bottom-0">
       <div className="flex flex-col justify-center">
         <div className="flex flex-row rounded-base items-center justify-center w-[36px] h-[36px] bg-Black100/10">
           <img src={wallet} alt="wallet" />

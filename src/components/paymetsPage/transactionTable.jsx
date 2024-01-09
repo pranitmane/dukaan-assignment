@@ -54,17 +54,17 @@ export default function TransactionTable({ data }) {
           {data.map((payment) => (
             <tr className="text-sm1  border-b-Black90 rounded-base">
               <td className="p-0">
-                <p className="text-start ml-3  text-Blue border-b border-b-Black90 pt-[10px] pb-[10px] pr-10">
+                <p className="text-start whitespace-nowrap ml-3  text-Blue border-b border-b-Black90 pt-[10px] pb-[10px] pr-10">
                   {payment.order_id}
                 </p>
               </td>
               <td className="p-0">
-                <p className="text-start border-b border-b-Black90 text-Black12 pl-3 pt-[10px] pb-[10px] pr-10">
+                <p className="text-start whitespace-nowrap border-b border-b-Black90 text-Black12 pl-3 pt-[10px] pb-[10px] pr-10">
                   {format(parseISO(payment.order_date_iso), "dd MMM, yyyy")}
                 </p>
               </td>
               <td className="p-0">
-                <p className="text-end border-b border-b-Black90 text-Black12 pl-3 pt-[10px] pb-[10px] pr-10">
+                <p className="text-end whitespace-nowrap border-b border-b-Black90 text-Black12 pl-3 pt-[10px] pb-[10px] pr-10">
                   {payment.order_amount}
                 </p>
               </td>

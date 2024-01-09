@@ -1,15 +1,12 @@
 import Navbar from './components/navbar'
 import {Outlet} from 'react-router-dom'
 
+
 function App() {
-
   return (
-    <div className='w-screen h-screen flex-row bg-Black98'>
+    <div className='z-0 w-screen h-screen flex flex-row bg-Black98 fixed'>
       <Navbar />
-      <div className='ml-[224px]'>
-      <Outlet />
-
-      </div>
+      <Outlet/>
     </div>
   )
 }
