@@ -8,7 +8,7 @@ export default function PaymentOverview({ setMonth }) {
           <select
             type="select"
             onChange={(e) => setMonth(e.target.value)}
-            className="bg-Black100 hover:bg-Black98 outline-none text-md1 hover:cursor-pointer  h-full pl-[14px] pr-[37px] pt-[6px] pb-[6px] rounded-base w-full"
+            className="bg-Black100 hover:bg-Black98 outline-none text-lg1 hover:cursor-pointer  h-full pl-[14px] pr-[37px] pt-[6px] pb-[6px] rounded-base w-full"
             placeholder="Last Month"
             style={{
               WebkitAppearance: "none",

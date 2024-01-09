@@ -12,14 +12,14 @@ export default function TransactionTable({ data }) {
         <div className="w-[216px] flex flex-row text-md1 border border-Black85 pt-[10px] pb-[10px] pl-4 pr-4 rounded-base gap-2">
           <img src={search} alt="search-icon" />
           <input
-            className="w-full bg-transparent outline-none"
+            className="w-full text-sm1 bg-transparent outline-none"
             type="text"
             placeholder="Search by order ID..."
           />
         </div>
         <div className="flex flex-row gap-3">
           <button className="text-md1 border hover:bg-Black98 rounded-base border-Black85 text-Black30 flex flex-row gap-[6px] justify-center items-center pl-3 pr-3 pt-[3px] pb-[3px]">
-            <p>Sort</p>
+            <p className="text-lg1">Sort</p>
             <img src={sort} alt="" />
           </button>
           <button className="border rounded-base hover:bg-Black98 border-Black85 text-Black30 flex flex-row justify-center items-center pl-3 pr-3 pt-[3px] pb-[3px]">
