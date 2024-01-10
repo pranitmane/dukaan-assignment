@@ -1,20 +1,33 @@
-import Search from "../../assets/paymentsPage/search.svg";
-import Help from "../../assets/paymentsPage/help.svg";
-import Marketing from "../../assets/paymentsPage/marketing.svg";
-import Polygon2 from "../../assets/paymentsPage/polygon2.svg";
-import HamburgerMenu from "../../assets/navBar/HamburgerMenu.svg";
+import Search from "../assets/paymentsPage/search.svg";
+import Help from "../assets/paymentsPage/help.svg";
+import Marketing from "../assets/paymentsPage/marketing.svg";
+import Polygon2 from "../assets/paymentsPage/polygon2.svg";
+import HamburgerMenu from "../assets/navBar/HamburgerMenu.svg";
+import { useRecoilState } from "recoil";
+import { navState } from "../store/atom";
 
-export default function SearchBar() {
+export default function SearchBar({ PageName }) {
+  const [navOpen, setNavOpen] = useRecoilState(navState);
 
   return (
     <div className="w-full flex flex-row p-3 pl-3 pr-3 md:pl-8 md:pr-8 gap-2 md:gap-4 bg-white border-b border-Black85 sticky top-0 z-10">
-      <div className="md:hidden flex items-center justify-center">
-      </div>
-      <div className="flex-1 flex flex-col md:flex-row items-center gap-1 md:gap-4">
-        <h2 className="text-md1">Payments</h2>
+      <button
+        className="md:hidden w-10 h-10 hover:bg-Black98 rounded-full flex items-center justify-center"
+        onClick={() => {
+          setNavOpen(!navOpen);
+        }}
+      >
+        <img
+          src={HamburgerMenu}
+          alt="hamburger-menu"
+          onClick={() => setNavOpen(!navOpen)}
+        />
+      </button>
+      <div className="md:flex-1 flex md:flex-row items-center gap-2 md:gap-4">
+        <h2 className="text-md1">{PageName}</h2>
         <div className="flex flex-row gap-[6px]">
           <img src={Help} alt="" />
-          <p className="text-2xs text-Black30 hover:underline cursor-help">
+          <p className="text-2xs text-Black30 hover:underline cursor-help hidden md:block">
             How it works
           </p>
         </div>

@@ -25,14 +25,15 @@ import AppearanceA from "../assets/navBar/AppearanceA.svg";
 import Plugin from "../assets/navBar/Plugin.svg";
 import PluginA from "../assets/navBar/PluginA.svg";
 import wallet from "../assets/navBar/wallet.svg";
-import {useState} from 'react'
+import {useRecoilState} from 'recoil'
+import {navState} from '../store/atom'
 
 import { NavLink,useLocation} from "react-router-dom";
 
 export default function Navbar() {
 const location = useLocation()
 const path = location.pathname
-
+const [navOpen,setNavOpen] = useRecoilState(navState)
 
 
   return (
@@ -41,6 +42,7 @@ const path = location.pathname
         <StoreDetails />
         <nav className="flex flex-col gap-1 w-full text-sm2">
           <NavLink
+            onClick={()=>{setNavOpen(false)}}
             to="/"
             className={({ isActive }) => {
               return isActive
@@ -72,6 +74,7 @@ const path = location.pathname
             <p className="flex-1">Analytics</p>
           </div>
           <NavLink
+            onClick={()=>{setNavOpen(false)}}
             to="/payments"
             className={({ isActive }) => {
               return isActive

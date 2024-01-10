@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { createBrowserRouter,RouterProvider,Route, createRoutesFromElements } from 'react-router-dom'
+import { RecoilRoot } from 'recoil'
+
 import App from './layout.jsx'
 import './index.css'
-import { createBrowserRouter,RouterProvider,Route, createRoutesFromElements } from 'react-router-dom'
 import Layout from './layout.jsx'
 import HomePage from './pages/homePage.jsx'
 import PaymentsPage from './pages/paymentPage.jsx'
@@ -18,7 +20,9 @@ const router = createBrowserRouter(
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <RecoilRoot>
   <React.StrictMode>
     <RouterProvider router={router}/>
-  </React.StrictMode>,
+  </React.StrictMode>
+  </RecoilRoot>,
 )

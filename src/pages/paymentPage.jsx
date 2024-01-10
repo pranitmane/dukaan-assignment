@@ -1,4 +1,4 @@
-import SearchBar from "../components/paymetsPage/searchBar";
+import SearchBar from "../components/searchBar";
 import PaymentOverview from "../components/paymetsPage/paymentOverview";
 import PaymentStats from "../components/paymetsPage/paymentStats";
 import TransactionTable from "../components/paymetsPage/transactionTable";
@@ -10,12 +10,12 @@ import payments from "../services/payments.json";
 
 
 
-export default function PaymentsPage({navOpen,setNavOpen}) {
+export default function PaymentsPage() {
   const [month, setMonth] = useState("This Month");
 
   return (
     <div className="w-full h-full relative overflow-y-scroll flex-1">
-      <SearchBar setNavOpen={setNavOpen} />
+      <SearchBar PageName="Payments"/>
       <div className="p-3 md:p-8">
         <PaymentOverview setMonth={setMonth} />
         <PaymentStats />
