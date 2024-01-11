@@ -8,7 +8,7 @@ import CloseMenu from './assets/navBar/CloseMenu.svg'
 function App() {
   const [navOpen,setNavOpen] = useRecoilState(navState)
   return (
-    <div className='z-0 w-screen h-screen flex flex-row bg-Black98'>
+    <div className='z-0 w-screen h-screen flex flex-row bg-Black98 fixed'>
       {
         navOpen && <div className='z-40 overflow-hidden w-full h-full fixed flex flex-row md:hidden'>
           <Navbar />

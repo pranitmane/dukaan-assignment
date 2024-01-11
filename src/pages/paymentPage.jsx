@@ -1,4 +1,4 @@
-import SearchBar from "../components/searchBar";
+import Header from "../components/header";
 import PaymentOverview from "../components/paymetsPage/paymentOverview";
 import PaymentStats from "../components/paymetsPage/paymentStats";
 import TransactionTable from "../components/paymetsPage/transactionTable";
@@ -15,7 +15,7 @@ export default function PaymentsPage() {
 
   return (
     <div className="w-full h-full relative overflow-y-scroll flex-1">
-      <SearchBar PageName="Payments"/>
+      <Header PageName="Payments"/>
       <div className="p-3 md:p-8">
         <PaymentOverview setMonth={setMonth} />
         <PaymentStats />

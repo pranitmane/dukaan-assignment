@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import SearchBar from "../components/searchBar";
+import Header from "../components/header";
 
 export default function HomePage() {
   return (
     <div className="overflow-y-scroll flex flex-col">
-      <SearchBar PageName="Home" />
+      <Header PageName="Home" />
       <div className="h-full p-4 md:p-8 flex flex-col items-center justify-between">
         <p>
           Visit{" "}
